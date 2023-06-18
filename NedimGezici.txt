@@ -1,0 +1,22 @@
+Intake kodu: src > main > java > intake.java
+
+2.Aşama görevi için sırasıyla yaptılarım:
+
+1. VS Code üzerinden "NedoIntake" adında bir WPILib projesi oluşturdum ve projeyi oluştururken masaüstü desteğini (Desktop Support) aktifleştirdim.
+
+2. Xbox ve motor kontrolcü kütüphanelerini FRC Phoenix ile WPILib sitelerinden indirip "import" fonksiyonu ile koda ekledim
+
+3. Görevden istenen Subsystem'i public class olarak ve CTRE Phoenix kütüphanesinden motoru private değişken olarak atadım. 
+Motoru kodun içerisinde aktifleştirmek için atadığım sınıfın altında motorun CAD ID değerini "1" olarak girerek tanımladım.
+
+4. runIntake fonksiyonu ile double tipinde bir değişkeni motorun hızı olarak "set" ettim. 
+Kodun devamında kontrolcüden alınan buton verisi bu double değişkenini 1 ile -1 arası değiştirerek motorun hızını kontrol edecek.
+
+5. Command Based Framework'te bulunan "IntakeCommand" sınıfı ile Xbox kontrolcüsünden gelen buton verisinin "button" integer değişkenine kaydedilmesini tanımladım.
+
+6. getRawButton fonksiyonu ile kontrolcünün düğmesine basılıp basılmama verisi elde edilir ve sonra button integerine atanır. 
+Eğer Xbox düğmesine basılmışsa fonksiyon true değerini verir ve intakespeed değişkeni 1 olarak değiştirilerek motorun hızı kontrol edilir. Aksi takdirde değer 0 olur ve motor durur.
+
+7. Kod VS Code WPILib menüsündeki "Simulate Project" özelliği ile robot simülatöründe açılır.
+
+8. Yapay zeka yardımıyla kodu camelcase uyumlu olacak şekilde değiştirdim.
